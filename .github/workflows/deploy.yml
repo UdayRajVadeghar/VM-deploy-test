@@ -15,5 +15,4 @@ jobs:
           host: 4.240.112.52
           username: udayraj
           key: ${{secrets.SSH_PRIVATE_KEY}}
-          script: |
-            bash ~/deploy.sh
+          script: bash ~/deploy.sh
