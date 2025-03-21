@@ -9,10 +9,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Deploy to VM via SSH
+      - name: 🚀 Debug Connection
         uses: appleboy/ssh-action@v0.1.8
         with:
           host: 4.240.112.52
           username: udayraj
-          key: ${{secrets.SSH_PRIVATE_KEY}}
-          script: bash /home/udayraj/deploy.sh
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            echo "✅ Successfully connected to the VM!"
+            ls -lah /home/udayraj/
+            echo "🔍 Checking deploy.sh permissions..."
+            ls -lah /home/udayraj/deploy.sh
+            echo "🚀 Running deploy.sh..."
+            bash /home/udayraj/deploy.sh
