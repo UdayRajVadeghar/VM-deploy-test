@@ -3,17 +3,17 @@ name: Deploy to VM
 on:
   push:
     branches:
-      - main # Change if your default branch is different
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: 🚀 Deploy to VM via SSH
+      - name: Deploy to VM via SSH
         uses: appleboy/ssh-action@v0.1.8
         with:
           host: 4.240.112.52
           username: udayraj
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          key: ${{secrets.SSH_PRIVATE_KEY}}
           script: |
             bash ~/deploy.sh
