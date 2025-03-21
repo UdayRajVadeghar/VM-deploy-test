@@ -16,4 +16,4 @@ jobs:
           username: udayraj
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            ~/deploy.sh
+            bash ~/deploy.sh
