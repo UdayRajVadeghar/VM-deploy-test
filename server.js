@@ -8,7 +8,9 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("webhooks testing 4");
+  res.send(
+    "Fucking fixed it , because github is connected to non interactive shell , we can access the global installs directly , instead we need to load the complete path in the deploy.sh file . lmao this was frustating. But finally done mfs"
+  );
 });
 
 app.listen(PORT, "0.0.0.0", () => {
