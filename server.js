@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Hello from Express , the web hooks are working successfully!");
+  res.send("Hello from Express , the web hooks are working successfully.!");
 });
 
 app.listen(PORT, "0.0.0.0", () => {
